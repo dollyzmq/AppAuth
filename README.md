@@ -1,4 +1,4 @@
-# Example Project for iOS app using Google OAuth API
+# Example iOS App using Google OAuth API
 
 ## CocoaPods Dependencies
 
