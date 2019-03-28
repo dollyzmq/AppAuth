@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -32,25 +32,25 @@
                         <action selector="userinfo:" destination="-1" eventType="touchUpInside" id="xSN-Ga-MvO"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pph-Jd-bi0">
-                    <rect key="frame" x="29" y="85" width="108" height="30"/>
+                <button opaque="NO" contentMode="left" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pph-Jd-bi0">
+                    <rect key="frame" x="29" y="85" width="52" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Clear AuthState"/>
+                    <state key="normal" title="Log out"/>
                     <connections>
                         <action selector="clearAuthState:" destination="-1" eventType="touchUpInside" id="xes-yd-Jhh"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EM1-NJ-NcX">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EM1-NJ-NcX">
                     <rect key="frame" x="8" y="246" width="359" height="413"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="344" id="MeJ-gQ-w8V"/>
+                        <constraint firstAttribute="height" constant="413" id="MeJ-gQ-w8V"/>
                     </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Log:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTy-wF-f8p">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTy-wF-f8p">
                     <rect key="frame" x="14" y="217.5" width="33.5" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,8 +66,8 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDb-QT-bEF">
-                    <rect key="frame" x="540" y="283" width="52" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDb-QT-bEF">
+                    <rect key="frame" x="325" y="212" width="34" height="30"/>
                     <state key="normal" title="clear"/>
                     <connections>
                         <action selector="clearLog:" destination="-1" eventType="touchUpInside" id="huR-jz-aPm"/>
@@ -76,7 +76,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6O-XG-moU">
                     <rect key="frame" x="29" y="62" width="174" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Authorize"/>
+                    <state key="normal" title="Log in"/>
                     <connections>
                         <action selector="authWithAutoCodeExchange:" destination="-1" eventType="touchUpInside" id="PsY-5Z-qCp"/>
                     </connections>
@@ -94,10 +94,10 @@
             <constraints>
                 <constraint firstItem="IKv-7l-Cvd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="29" id="HBw-vy-6v9"/>
                 <constraint firstAttribute="bottom" secondItem="EM1-NJ-NcX" secondAttribute="bottom" constant="8" id="KWQ-sd-1Jo"/>
-                <constraint firstItem="EM1-NJ-NcX" firstAttribute="top" secondItem="CDb-QT-bEF" secondAttribute="bottom" constant="2" id="L6P-rI-jQg"/>
-                <constraint firstItem="QTy-wF-f8p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Mpc-qp-uqD"/>
+                <constraint firstItem="EM1-NJ-NcX" firstAttribute="top" secondItem="CDb-QT-bEF" secondAttribute="bottom" constant="4" id="L6P-rI-jQg"/>
+                <constraint firstItem="QTy-wF-f8p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="14" id="Mpc-qp-uqD"/>
                 <constraint firstItem="EM1-NJ-NcX" firstAttribute="top" secondItem="QTy-wF-f8p" secondAttribute="bottom" constant="8" id="bKA-Lh-Pcq"/>
-                <constraint firstAttribute="trailing" secondItem="CDb-QT-bEF" secondAttribute="trailing" constant="8" id="dUb-5S-22S"/>
+                <constraint firstAttribute="trailing" secondItem="CDb-QT-bEF" secondAttribute="trailing" constant="16" id="dUb-5S-22S"/>
                 <constraint firstItem="EM1-NJ-NcX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="fot-ru-IwC"/>
                 <constraint firstItem="IKv-7l-Cvd" firstAttribute="centerX" secondItem="EM1-NJ-NcX" secondAttribute="centerX" id="n0U-wx-Ip7"/>
                 <constraint firstAttribute="trailing" secondItem="EM1-NJ-NcX" secondAttribute="trailing" constant="8" id="scC-57-iJN"/>

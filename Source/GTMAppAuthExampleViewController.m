@@ -37,7 +37,7 @@ static NSString *const kIssuer = @"https://accounts.google.com";
         https://console.developers.google.com/apis/credentials?project=_
         The client should be registered with the "iOS" type.
  */
-static NSString *const kClientID = @"611577311498-7tr3eau3ci6dg2320hinl8inb9qd9i4l.apps.googleusercontent.com";
+static NSString *const kClientID = @"1016208914368-f5srpgos3ch4156t8c1nnaou33ukv7k4.apps.googleusercontent.com";
 
 /*! @brief The OAuth redirect URI for the client @c kClientID.
     @discussion With Google, the scheme of the redirect URI is the reverse DNS notation of the
@@ -46,7 +46,7 @@ static NSString *const kClientID = @"611577311498-7tr3eau3ci6dg2320hinl8inb9qd9i
         'oauthredirect' here to help disambiguate from any other use of this scheme.
  */
 static NSString *const kRedirectURI =
-    @"com.googleusercontent.apps.611577311498-7tr3eau3ci6dg2320hinl8inb9qd9i4l:/oauthredirect";
+    @"com.googleusercontent.apps.1016208914368-f5srpgos3ch4156t8c1nnaou33ukv7k4:/oauthredirect";
 
 /*! @brief @c NSCoding key for the authState property.
  */
@@ -136,14 +136,15 @@ static NSString *const kExampleAuthorizerKey = @"authorization";
   _userinfoButton.enabled = _authorization.canAuthorize;
   _driveButton.enabled = _authorization.canAuthorize;
   _clearAuthStateButton.enabled = _authorization.canAuthorize;
+  _authAutoButton.enabled = !_authorization.canAuthorize;
   // dynamically changes authorize button text depending on authorized state
-  if (!_authorization.canAuthorize) {
-    [_authAutoButton setTitle:@"Authorize" forState:UIControlStateNormal];
-    [_authAutoButton setTitle:@"Authorize" forState:UIControlStateHighlighted];
-  } else {
-    [_authAutoButton setTitle:@"Re-authorize" forState:UIControlStateNormal];
-    [_authAutoButton setTitle:@"Re-authorize" forState:UIControlStateHighlighted];
-  }
+//  if (!_authorization.canAuthorize) {
+//    [_authAutoButton setTitle:@"Authorize" forState:UIControlStateNormal];
+//    [_authAutoButton setTitle:@"Authorize" forState:UIControlStateHighlighted];
+//  } else {
+//    [_authAutoButton setTitle:@"Re-authorize" forState:UIControlStateNormal];
+//    [_authAutoButton setTitle:@"Re-authorize" forState:UIControlStateHighlighted];
+//  }
 }
 
 - (void)stateChanged {
@@ -244,7 +245,7 @@ static NSString *const kExampleAuthorizerKey = @"authorization";
   // Normally you would save this service object and re-use it for all REST API calls.
   GTMSessionFetcherService *fetcherService = [[GTMSessionFetcherService alloc] init];
   fetcherService.authorizer = self.authorization;
-
+ 
   // Creates a fetcher for the API call.
   NSURL *userinfoEndpoint = [NSURL URLWithString:@"https://www.googleapis.com/oauth2/v3/userinfo"];
   GTMSessionFetcher *fetcher = [fetcherService fetcherWithURL:userinfoEndpoint];
@@ -300,28 +301,21 @@ static NSString *const kExampleAuthorizerKey = @"authorization";
     query.fields = @"kind,nextPageToken,files(mimeType,id,kind,name,webViewLink,thumbnailLink,trashed)";
     
     [service executeQuery:query
-                          completionHandler:^(GTLRServiceTicket *callbackTicket,
-                                              GTLRDrive_FileList *fileList,
-                                              NSError *error) {
+             completionHandler:^(GTLRServiceTicket *callbackTicket, GTLRDrive_FileList *fileList, NSError *error) {
                               // Callback
                               if (error) {
                                 [self logMessage:@"Fetch drive file list error: %@", error];
                                 return;
                               }
                               
-                              // Parses the JSON response.
-//                              NSError *jsonError = nil;
-                              id jsonDictionaryOrArray = fileList.files;
-//                              [NSJSONSerialization JSONObjectWithData:fileList.files options:0 error:&jsonError];
+                              //Success response!
+                              NSString *str = @"";
+                              for (GTLRDrive_File* file in fileList.files) {
+                                  NSString *s = [[NSString alloc] initWithFormat:@"{Name: %@ ID: %@ Link: %@} \n",file.name, file.identifier, file.webViewLink];
+                                  str = [str stringByAppendingString:s];
+                              }
+                              [self logMessage:@"Drive Files:\n %@", str];
                               
-                              // JSON error.
-//                              if (jsonError) {
-//                                  [self logMessage:@"JSON decoding error %@", jsonError];
-//                                  return;
-//                              }
-                              
-                              // Success response!
-                              [self logMessage:@"Drive Files: %@", jsonDictionaryOrArray];
                           }];
 }
 

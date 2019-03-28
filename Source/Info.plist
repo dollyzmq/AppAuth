@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.example.myapp</string>
+	<string>com.example.appauth</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -25,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.611577311498-7tr3eau3ci6dg2320hinl8inb9qd9i4l</string>
+				<string>com.googleusercontent.apps.1016208914368-f5srpgos3ch4156t8c1nnaou33ukv7k4</string>
 			</array>
 		</dict>
 	</array>
