@@ -14,12 +14,17 @@ $ pod install
 ```
 $ open Example-iOS.xcworkspace
 ```
+## Run the App
+
+By running the app in Xcode, iOS Simulator will be opened to simulate an iOS
+device. You will be able to test the various functionalities of the app.
 
 
 ## Configure the Example to Use Your Client
 
-To try the example with your own client, changes need to be made in the following
-three places:
+To try the example app with your own client, you need to first create an iOS OAuth
+client in Pantheon with bundle id "com.example.appauth", and then change the urls
+in the following three places:
 
 1. In `GTMAppAuthExampleViewController.m` update `kClientID` with your new client
 id.
