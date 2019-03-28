@@ -16,7 +16,7 @@ $ open Example-iOS.xcworkspace
 ```
 
 
-### Configure the Example to Use Your Client
+## Configure the Example to Use Your Client
 
 To try the example with your own client, changes need to be made in the following
 three places:
