@@ -16,17 +16,14 @@ PODS:
 
 DEPENDENCIES:
   - GoogleAPIClientForREST/Drive
-  - GTMAppAuth (from `../`)
+  - GTMAppAuth
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AppAuth
     - GoogleAPIClientForREST
+    - GTMAppAuth
     - GTMSessionFetcher
-
-EXTERNAL SOURCES:
-  GTMAppAuth:
-    :path: "../"
 
 SPEC CHECKSUMS:
   AppAuth: 137f6bb6fc9dfbaf2cf9f6fcff1d336ff0163bc6
@@ -34,6 +31,6 @@ SPEC CHECKSUMS:
   GTMAppAuth: c5e41aaf039ac1ccc41543e6ea2ef7abd255ad41
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
 
-PODFILE CHECKSUM: afbfde09cb2d053773e58fa9f67e513583d02db8
+PODFILE CHECKSUM: 1292d0ab2d650e6f6ec918f48ec346d1f1ed4d04
 
 COCOAPODS: 1.6.1
